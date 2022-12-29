@@ -7,3 +7,14 @@ img{
     border-radius: 50%;
    
 }
+
+#MenuNavegacion{
+    justify-content: flex-end;
+}
+a{
+    color: black;
+}
+a:hover{
+    transform: scale(1.1);
+    transition: 0.3s all ;
+}

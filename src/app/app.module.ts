@@ -11,6 +11,10 @@ import { ContactaComponent } from './pages/contacta/contacta.component';
 import { AdminComponent } from './pages/admin/admin.component';
 import { PruebasComponent } from './pruebas/pruebas.component';
 import { HomeComponent } from './pages/home/home.component';
+import { FooterComponent } from './core/footer/footer.component';
+import { CaballosComponent } from './pages/nosotros/caballos/caballos.component';
+import { CaballoDetailComponent } from './pages/nosotros/caballos/caballo-detail/caballo-detail.component';
+import { InstalacionesComponent } from './pages/nosotros/instalaciones/instalaciones.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +25,11 @@ import { HomeComponent } from './pages/home/home.component';
     ContactaComponent,
     AdminComponent,
     PruebasComponent,
-    HomeComponent
+    HomeComponent,
+    FooterComponent,
+    CaballosComponent,
+    CaballoDetailComponent,
+    InstalacionesComponent
   ],
   imports: [
     BrowserModule,

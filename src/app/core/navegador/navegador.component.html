@@ -1,13 +1,20 @@
-<nav class="navbar navbar-expand-lg">
-    <div class="container">
-      
-        <img src="../../assets/logo_jim.png" alt="logo_jim" routerLink="">
-      
-    
+<nav class="navbar navbar-expand-md">
+  <div class="container-fluid">
 
-    <ul class="nav nav-pills nav-fill">
+    <a  class="navbar-brand"><img routerLink="" src="../../assets/logo_jim.png" alt="logo_jim"></a>
+
+   
+
+    <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#MenuNavegacion">
+      <span class="navbar-toggler-icon"></span>
+
+    </button>
+
+    <div id="MenuNavegacion" class="collapse navbar-collapse">
+
+      <ul class="navbar-nav ms-3">
         <li class="nav-item">
-          <a class="nav-link " routerLink="/nosotros">Nosotros</a>
+          <a class="nav-link" routerLink="/nosotros">Nosotros</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" routerLink="/actividades">Actividades</a>
@@ -20,4 +27,38 @@
         </li>
       </ul>
     </div>
-  </nav>
+  </div>
+</nav>
+
+
+  <!-- <nav class="navbar navbar-expand-md">
+    <div class="container-fluid">
+
+      <a href="#" class="navbar-brand"><img routerLink="/home" src="../../assets/logo_jim.png" alt="logo_jim"></a>
+
+     
+
+      <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#MenuNavegacion">
+        <span class="navbar-toggler-icon"></span>
+
+      </button>
+
+      <div id="MenuNavegacion" class="collapse navbar-collapse">
+
+        <ul class="navbar-nav ms-3">
+          <li class="nav-item">
+            <a class="nav-link " routerLink="/nosotros">Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/actividades">Actividades</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/contacta">Contacta</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " routerLink="/admin">Admin</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav> -->
