@@ -1,11 +1,13 @@
 .our {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     width: 100vw;
     height: 70vh;
 
     gap: 30px;
+    /* background-image: linear-gradient(rgba(243, 229, 229, 0.5), rgba(255, 255, 255, 0.87)), url(../../../assets/pupilaje.jpg); */
 
 }
 
@@ -22,12 +24,14 @@
 }
 
 .instalaciones {
-    background-image: linear-gradient(rgba(243, 229, 229, 0.5), rgba(255, 255, 255, 0.87)), url(../../../assets/instalaciones/Instalaciones.jpg);
+    /* background-image: linear-gradient(rgba(243, 229, 229, 0.5), rgba(255, 255, 255, 0.87)), url(../../../assets/instalaciones/Instalaciones.jpg); */
+
+    background-image: url(../../../assets/instalaciones/Instalaciones.jpg);
    
 }
 
 .caballos {
-    background-image: linear-gradient(rgba(243, 229, 229, 0.5), rgba(255, 255, 255, 0.87)), url(../../../assets/caballos/IMG20220916195052.jpg);
+    background-image:  url(../../../assets/caballos/IMG20220916195052.jpg);
    
 
 }
@@ -43,7 +47,7 @@ div {
 button {
     padding: 20px;
     background-color:
-    #f9d5b3;
+    #f9d5b385;
     font-weight: bolder;
     border: 2px solid black;
 
