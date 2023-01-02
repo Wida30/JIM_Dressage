@@ -1,0 +1,53 @@
+.header {
+   
+    font-size: 27px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.bigicon {
+    font-size: 35px;
+    color: #070707;
+}
+
+label{
+    font-weight: bold;
+}
+
+button{
+    margin: 30px 0px;
+    background-color: #f6efe8;
+    color: black;
+    border-color: #f6efe8;
+}
+
+button:hover{
+    margin: 30px 0px;
+    background-color: #f6efe8;
+    border-color: #f6efe8;
+    color: black;
+    transform: scale(1.2);
+    transition: all 0.5s;
+
+}
+
+form{
+    background-color: rgba(250, 250, 250, 0.5);
+    border-radius: 8px;
+    
+}
+
+div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    background-image: url(../../../assets/contacto.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 30px;
+}

@@ -12,9 +12,16 @@ import { AdminComponent } from './pages/admin/admin.component';
 import { PruebasComponent } from './pruebas/pruebas.component';
 import { HomeComponent } from './pages/home/home.component';
 import { FooterComponent } from './core/footer/footer.component';
-import { CaballosComponent } from './pages/nosotros/caballos/caballos.component';
-import { CaballoDetailComponent } from './pages/nosotros/caballos/caballo-detail/caballo-detail.component';
-import { InstalacionesComponent } from './pages/nosotros/instalaciones/instalaciones.component';
+
+
+
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+
+import { InstalComponent } from './pages/instal/instal.component';
+import { RecintoComponent } from './pages/instal/recinto/recinto.component';
+
+
 
 @NgModule({
   declarations: [
@@ -27,16 +34,19 @@ import { InstalacionesComponent } from './pages/nosotros/instalaciones/instalaci
     PruebasComponent,
     HomeComponent,
     FooterComponent,
-    CaballosComponent,
-    CaballoDetailComponent,
-    InstalacionesComponent
+    
+    InstalComponent,
+         RecintoComponent
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule, 
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

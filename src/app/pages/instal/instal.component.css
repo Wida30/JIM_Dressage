@@ -31,7 +31,7 @@
 }
 
 .caballos {
-    background-image:  url(../../../assets/caballos/IMG20220916195052.jpg);
+    background-image:  url(../../../assets/caballos/caballos.jpg);
    
 
 }
@@ -47,15 +47,16 @@
 button {
     padding: 20px;
     background-color:
-    #f9d5b385;
+    #f9d5b3d5;
     font-weight: bolder;
     border: 2px solid black;
+   
 
 }
 
 button:hover{
     transform: scale(1.3);
-   
+   color: whitesmoke;
     transition: 0.5s;
 }
 
@@ -64,4 +65,3 @@ button:hover{
     text-align: center;
 
 }
-
