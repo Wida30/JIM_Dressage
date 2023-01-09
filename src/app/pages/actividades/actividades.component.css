@@ -1,12 +1,22 @@
 
-
-h5, p{
-    color: #fbfbfb;
-    
+img {
+    width: 65vw;
+    margin-left: 20px;
+}
+button{
+    font-size: larger;
+    font-weight: bolder;
+}
+h4{
+    padding: 80px 5px;
 }
 
-.carousel-caption{
-    background-color: rgba(255, 228, 196, 0.441);
+.center{
+    width: 99%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 

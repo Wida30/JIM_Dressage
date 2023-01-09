@@ -4,12 +4,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { ActividadesComponent } from './pages/actividades/actividades.component';
 import { AdminComponent } from './pages/admin/admin.component';
 import { ContactaComponent } from './pages/contacta/contacta.component';
-
 import { NosotrosComponent } from './pages/nosotros/nosotros.component';
-
 import { InstalComponent } from './pages/instal/instal.component';
-
 import { RecintoComponent } from './pages/instal/recinto/recinto.component';
+import { CaballosComponent } from './pages/instal/caballos/caballos.component';
 
 const routes: Routes = [
 {path: "", pathMatch: "full", component: NosotrosComponent},
@@ -18,7 +16,8 @@ const routes: Routes = [
 {path: "actividades", component: ActividadesComponent},
 {path: "contacta", component: ContactaComponent},
 {path: "admin", component: AdminComponent},
-{path: "recinto", component: RecintoComponent}
+{path: "recinto", component: RecintoComponent},
+{path: "caballos", component: CaballosComponent}
 
 ];
 

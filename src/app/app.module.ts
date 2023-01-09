@@ -20,6 +20,7 @@ import { FormsModule } from '@angular/forms';
 
 import { InstalComponent } from './pages/instal/instal.component';
 import { RecintoComponent } from './pages/instal/recinto/recinto.component';
+import { CaballosComponent } from './pages/instal/caballos/caballos.component';
 
 
 
@@ -36,7 +37,8 @@ import { RecintoComponent } from './pages/instal/recinto/recinto.component';
     FooterComponent,
     
     InstalComponent,
-         RecintoComponent
+         RecintoComponent,
+         CaballosComponent
     
   ],
   imports: [
