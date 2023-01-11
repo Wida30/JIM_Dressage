@@ -16,7 +16,7 @@ import { FooterComponent } from './core/footer/footer.component';
 
 
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { InstalComponent } from './pages/instal/instal.component';
 import { RecintoComponent } from './pages/instal/recinto/recinto.component';
@@ -35,6 +35,7 @@ import { CaballosComponent } from './pages/instal/caballos/caballos.component';
     PruebasComponent,
     HomeComponent,
     FooterComponent,
+  
     
     InstalComponent,
          RecintoComponent,
@@ -46,7 +47,8 @@ import { CaballosComponent } from './pages/instal/caballos/caballos.component';
     AppRoutingModule,
     NgbModule, 
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [ ],
   bootstrap: [AppComponent]

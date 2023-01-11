@@ -6,6 +6,7 @@ img {
 button{
     font-size: larger;
     font-weight: bolder;
+    background: rgb(236, 235, 235);
 }
 h4{
     padding: 80px 5px;
@@ -29,3 +30,4 @@ h4{
     border-radius: 5px;
 
 }
+

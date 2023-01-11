@@ -17,13 +17,14 @@ export class ContactaComponent implements OnInit {
 
   public sendEmail(e: Event) {
     e.preventDefault();
+    console.log(e)
 
     
-    emailjs.sendForm('service_j6n2b7k', 'template_bo3qbob', e.target as HTMLFormElement, 'JcZaAv_MqGs2yEZQE')
-      .then((result: EmailJSResponseStatus) => {
-        console.log(result.text);
-      }, (error: any) => {
-        console.log(error.text);
-      });
+    // emailjs.sendForm('service_j6n2b7k', 'template_bo3qbob', e.target as HTMLFormElement, 'JcZaAv_MqGs2yEZQE')
+    //   .then((result: EmailJSResponseStatus) => {
+    //     console.log(result.text);
+    //   }, (error: any) => {
+    //     console.log(error.text);
+    //   });
   }
 }

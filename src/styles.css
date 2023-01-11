@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 
-a, ul, li{
-    color: black;
+body{
+    background: rgb(236, 235, 235);
+
 }

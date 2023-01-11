@@ -9,6 +9,9 @@
     font-size: 35px;
     color: #070707;
 }
+input.ng-invalid.ng-touched{
+    border: 1px solid red;
+}
 
 label{
     font-weight: bold;
@@ -51,3 +54,5 @@ div{
     background-repeat: no-repeat;
     padding: 30px;
 }
+
+
