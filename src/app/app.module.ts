@@ -21,6 +21,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InstalComponent } from './pages/instal/instal.component';
 import { RecintoComponent } from './pages/instal/recinto/recinto.component';
 import { CaballosComponent } from './pages/instal/caballos/caballos.component';
+import { AuthComponent } from './pages/admin/auth/auth.component';
 
 
 
@@ -39,7 +40,8 @@ import { CaballosComponent } from './pages/instal/caballos/caballos.component';
     
     InstalComponent,
          RecintoComponent,
-         CaballosComponent
+         CaballosComponent,
+         AuthComponent
     
   ],
   imports: [
