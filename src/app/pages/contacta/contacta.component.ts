@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import Swal from 'sweetalert2'
 import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
+import { NgForm } from '@angular/forms';
+import { formatCurrency } from '@angular/common';
 
 
 
@@ -19,6 +21,8 @@ export class ContactaComponent implements OnInit {
   public sendEmail(e: Event) {
     e.preventDefault();
     console.log(e)
+
+    
 
     Swal.fire({
       title: 'Gracias por tu mensaje!',
