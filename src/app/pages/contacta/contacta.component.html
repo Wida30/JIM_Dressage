@@ -1,14 +1,3 @@
-<!-- <form class="contact-form" (submit)="sendEmail($event)">
-  <label>Name</label>
-  <input type="text" name="user_name">
-  <label>Email</label>
-  <input type="email" name="user_email">
-  <label>telefono</label>
-  <input type="text" name="user_telefono">
-  <label>Message</label>
-  <textarea name="message"></textarea>
-  <button type="submit" value="Send"> enviar </button>
-</form> -->
 
 <div class="container">
   <div class="row">
@@ -17,54 +6,77 @@
               <form 
               class="contact-form" 
               (submit)="sendEmail($event)"  
-              #f="ngForm">
+           
+              [formGroup]="formularioContacto" 
+              (ngSubmit)="onSubmit()"
+              >
                   <fieldset>
                       <legend class="text-center header">Contacta o envíamos tus sugerencias</legend>
 
                       <div class="form-group">
                           <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
                           <div class="col-md-8">
-                            <label>Nombre completo</label>
+                            <label for="user_name" >Nombre completo</label>
                               <input 
-                              id="fname" 
+                              id="user_name" 
                               name="user_name" 
                               type="text" 
-                              placeholder="Nombre completo" class="form-control">
+                              placeholder="Nombre completo" 
+                              class="form-control"
+                              formControlName="user_name">
+
+
                           </div>
+
+                          <span *ngIf="formularioContacto.get('user_name')?.invalid && formularioContacto.get('user_name')?.touched"
+                          class="help-block">
+                            Por favor, Introduzca un Nombre
+                        </span>
                       </div>                  
                       <div class="form-group">
                           <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-envelope-o bigicon"></i></span>
                           <div class="col-md-8">
-                            <label>Email</label>
+                            <label for="email" >Email</label>
                               <input 
                               id="email" 
-                              name="user_email" 
+                              name="email" 
                               type="text" 
                               placeholder="Direccion de email" class="form-control" 
-                              required
-                              email>
+                             formControlName="email">
                           </div>
+                          <span *ngIf="formularioContacto.get('email')?.invalid && formularioContacto.get('email')?.touched"
+                          class="help-block">
+                           Inserte una direccion de correo electrónico correcta
+                        </span>
                       </div>
                       <div class="form-group">
                           <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-phone-square bigicon"></i></span>
                           <div class="col-md-8">
-                            <label>Telefono</label>
+                            <label for="phone" >Telefono</label>
                               <input 
                               id="phone" 
-                              name="user_telefono" 
-                              type="text" 
+                              name="phone" 
+                              type="number" 
                               placeholder="Telefono de contacto" 
                               class="form-control" 
-                              required 
+                              formControlName="phone" 
                               >
                           </div>
+                          <span *ngIf="formularioContacto.get('phone')?.invalid && formularioContacto.get('phone')?.touched"
+                          class="help-block">
+                            Número de teléfono incorrecto
+                        </span>
                       </div>
 
                       <div class="form-group">
                           <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-pencil-square-o bigicon"></i></span>
                           <div class="col-md-8">
-                            <label>Tu consulta</label>
-                              <textarea class="form-control" id="message" name="message" placeholder="Introduzca su mensaje, le contestaremos lo antes posible, gracias." rows="7"></textarea>
+                            <label for="message" >Tu consulta</label>
+                              <textarea 
+                              class="form-control" 
+                              id="message" 
+                              name="message" 
+                              placeholder="Introduzca su mensaje, le contestaremos lo antes posible, gracias." rows="7"></textarea>
                           </div>
                       </div>
 
@@ -72,7 +84,7 @@
                           <div class="col-md-12 text-center">
                               <button 
                               type="submit" 
-                              class="btn btn-primary btn-lg" [disabled]="!f.valid">Enviar</button>
+                              class="btn btn-primary btn-lg" [disabled]="formularioContacto.invalid">Enviar</button>
                           </div>
                       </div>
                   </fieldset>
