@@ -1,54 +1,84 @@
-import { AuthService } from './auth.service';
+import { AuthResponseData, AuthService } from './auth.service';
 import { NgForm } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
-
-
+import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-auth',
   templateUrl: './auth.component.html',
-  styleUrls: ['./auth.component.css']
+  styleUrls: ['./auth.component.css'],
 })
 export class AuthComponent implements OnInit {
+ 
+  error!: string;
 
-  isLogin = true;
+  constructor(private authService: AuthService, private router:Router) {}
 
-  constructor(private authService: AuthService) { }
+  ngOnInit(): void {}
 
-  ngOnInit(): void {
-  }
-
-  cambioLogin (){
-    this.isLogin =!this.isLogin;
-  }
-
-  onSubmit(form: NgForm){
-    console.log(form.value);
-
-    const email= form.value.email;
+  onSubmit(form: NgForm) {
+    if (!form.valid) {
+      return;
+    }
+    const email = form.value.email;
     const password = form.value.password;
 
-    this.authService.login(email, password).subscribe(resData => {
-         console.log(resData);
-        
-       }, error => 
-       {
-        console.log(error.error.error.message);
-       
-       });
+    let authObs: Observable<AuthResponseData>;
 
-    // this.authService.singIn(email, password).subscribe(resData => {
-    //   console.log(resData);
-      
-    // }, error => 
-    // {console.log(error);
-    // });
+    authObs = this.authService.login(email, password);
 
-    form.reset()
+    authObs.subscribe(
+      (resData) => {
+        console.log(resData);
+        this.router.navigate(['/administrador'])
+      },
+      (errorMessage) => {
+        console.log(errorMessage);
+        this.error = errorMessage;
+      }
+    );
+
+    form.reset();
   }
 
- error(){
-  console.log(this.error)
- }
+  // onSubmit(form: NgForm){
+  //   console.log(form.value);
 
+  //   const email= form.value.email;
+  //   const password = form.value.password;
+
+  //   let authObs = Observable<AuthResponseData>
+
+  //   this.authService.login(email, password).subscribe(resData => {
+  //        console.log(resData);
+
+  //      }, error =>
+  //      {
+  //       console.log(error.error.error.message);
+
+  //      }
+
+  //      );
+
+  //      authObs.subscribe( resData => {
+  //       console.log(resData)
+  //      },
+  //      errorMessage => {
+  //       console.log (errorMessage);
+  //       this.error =errorMessage;
+
+  //      });
+
+  //   // this.authService.singIn(email, password).subscribe(resData => {
+  //   //   console.log(resData);
+
+  //   // }, error =>
+  //   // {console.log(error);
+  //   // });
+
+  //   form.reset()
+  // }
+
+  
 }

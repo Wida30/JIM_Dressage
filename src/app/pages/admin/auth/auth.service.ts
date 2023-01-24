@@ -1,8 +1,13 @@
+
+
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { catchError } from 'rxjs';
+import { catchError, tap } from 'rxjs/operators';
+import { throwError, Subject } from 'rxjs';
+import { User } from './user.model';
 
-interface AuthResponseData {
+export interface AuthResponseData {
+  kind: string;
   idToken: string;
   email: string;
   refreshToken: string;
@@ -15,6 +20,9 @@ interface AuthResponseData {
   providedIn: 'root',
 })
 export class AuthService {
+
+  user = new Subject<User>();
+
   constructor(private http: HttpClient) {}
 
   // EL METODO DE ABAJO ES PARA CREAR NUEVOS USUARIOS
@@ -43,11 +51,36 @@ export class AuthService {
         returnSecureToken: true,
       }
       
+    ).pipe(
+      catchError(errorRes => {
+        let errorMessage = 'No estas autorizado';
+        return throwError (errorMessage)
+      }),
+      tap(resData => {
+        this.handleAuthentication(
+          resData.email,
+          resData.localId,
+          resData.idToken,
+          +resData.expiresIn
+        );
+      })
+      
     );
    
   }
 
-  hadleError() {
-    console.log("log del error")
+  private handleAuthentication(
+    email: string,
+    userId: string,
+    token: string,
+    expiresIn: number
+  ) {
+    const expirationDate = new Date(new Date().getTime() + expiresIn * 1000);
+    const user = new User(email, userId, token, expirationDate);
+    this.user.next(user);
   }
+
+  
+
+  
 }

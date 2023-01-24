@@ -22,6 +22,7 @@ import { InstalComponent } from './pages/instal/instal.component';
 import { RecintoComponent } from './pages/instal/recinto/recinto.component';
 import { CaballosComponent } from './pages/instal/caballos/caballos.component';
 import { AuthComponent } from './pages/admin/auth/auth.component';
+import { AdministradorComponent } from './pages/admin/administrador/administrador.component';
 
 
 
@@ -41,7 +42,8 @@ import { AuthComponent } from './pages/admin/auth/auth.component';
     InstalComponent,
          RecintoComponent,
          CaballosComponent,
-         AuthComponent
+         AuthComponent,
+         AdministradorComponent
     
   ],
   imports: [

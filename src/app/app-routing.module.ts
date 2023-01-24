@@ -8,6 +8,7 @@ import { NosotrosComponent } from './pages/nosotros/nosotros.component';
 import { InstalComponent } from './pages/instal/instal.component';
 import { RecintoComponent } from './pages/instal/recinto/recinto.component';
 import { CaballosComponent } from './pages/instal/caballos/caballos.component';
+import { AdministradorComponent } from './pages/admin/administrador/administrador.component';
 
 const routes: Routes = [
 {path: "", pathMatch: "full", component: NosotrosComponent},
@@ -17,7 +18,8 @@ const routes: Routes = [
 {path: "contacta", component: ContactaComponent},
 {path: "admin", component: AdminComponent},
 {path: "recinto", component: RecintoComponent},
-{path: "caballos", component: CaballosComponent}
+{path: "caballos", component: CaballosComponent},
+{path: "administrador", component: AdministradorComponent}
 
 ];
 

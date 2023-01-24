@@ -25,8 +25,11 @@
         <li class="nav-item">
           <a class="nav-link" routerLink="/contacta">Contacta</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link " routerLink="/admin">Admin</a>
+        <li class="nav-item" *ngIf="!isAuth">
+          <a class="nav-link " routerLink="/admin" >Admin</a>
+        </li>
+        <li class="nav-item" *ngIf="isAuth" >
+          <a class="nav-link " style="cursor: pointer;" > ❌</a>
         </li>
       </ul>
     </div>
