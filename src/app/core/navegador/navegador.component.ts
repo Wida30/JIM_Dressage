@@ -1,4 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { AuthService } from 'src/app/pages/admin/auth/auth.service';
 
@@ -11,7 +12,7 @@ export class NavegadorComponent implements OnInit, OnDestroy {
   private userSub!: Subscription;
   isAuth = false;
 
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit(): void {
 
@@ -19,6 +20,16 @@ export class NavegadorComponent implements OnInit, OnDestroy {
       this.isAuth =!!user;
 
     });
+  }
+
+  logOut(){
+
+    // this.authService.logOut()
+    this.isAuth = false
+    console.log("dentro logout");
+    this.router.navigate(['nosotros'])
+    
+
   }
 
   ngOnDestroy(): void {

@@ -1,0 +1,13 @@
+.container{
+    margin: 100px auto;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.form-control{
+    margin-bottom: 25px;
+}
+
+button{
+    margin: auto;
+}

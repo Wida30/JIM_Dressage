@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core';
 import { catchError, tap } from 'rxjs/operators';
 import { throwError, Subject } from 'rxjs';
 import { User } from './user.model';
+import { Router } from '@angular/router';
 
 export interface AuthResponseData {
   kind: string;
@@ -23,7 +24,7 @@ export class AuthService {
 
   user = new Subject<User>();
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private router: Router) {}
 
   // EL METODO DE ABAJO ES PARA CREAR NUEVOS USUARIOS
 
@@ -68,6 +69,7 @@ export class AuthService {
     );
    
   }
+
 
   private handleAuthentication(
     email: string,
