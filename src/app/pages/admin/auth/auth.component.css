@@ -10,4 +10,17 @@
 
 button{
     margin: auto;
+    width: 150px;
+}
+
+button:disabled{
+
+    background-color: lightblue;
+
+}
+
+p{
+  color: red;
+    padding: 20px;
+    text-align: center;
 }

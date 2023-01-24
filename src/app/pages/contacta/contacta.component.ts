@@ -20,30 +20,17 @@ export class ContactaComponent implements OnInit {
   ngOnInit(): void {
 
     this.formularioContacto = new FormGroup({
-      'user_name': new FormControl(
-        null, 
-        Validators.required),
-      'email': new FormControl(
-        null, 
-        [Validators.required, Validators.email]),
-      'phone': new FormControl(
-        null, 
-        [ Validators.required, Validators.minLength(9)]),
-      'message': new FormControl(
-        null),
+      'user_name': new FormControl(null, Validators.required),
+      'email': new FormControl(null, [Validators.required, Validators.email]),
+      'phone': new FormControl('',  [ Validators.pattern("^((\\+91-?)|0)?[0-9]{9}$"), Validators.required]),
+      'message': new FormControl(null)
     });
   }
 
-  onSubmit(){
-    console.log(this.formularioContacto);
-    this.formularioContacto.reset()
-  }
-
-  public sendEmail(e: Event) {
+    public sendEmail(e: Event) {
     e.preventDefault();
     console.log(e)
 
-    
 
     Swal.fire({
       title: 'Gracias por tu mensaje!',
@@ -61,5 +48,8 @@ export class ContactaComponent implements OnInit {
       }, (error: any) => {
         console.log(error.text);
       });
+
+    this.formularioContacto.reset()
+
   }
 }

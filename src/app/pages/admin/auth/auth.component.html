@@ -30,19 +30,23 @@
             </div>
 
             <p class="danger" *ngIf="error"> {{error}}</p>
+
             
-            <div>
+            
+            <div class="row">
                 <button 
                 class="btn btn-primary"
                 type="submit"
                 [disabled]="authForm.invalid"
                 
-                >entrar</button>
+                >Entrar</button>
 
 
               
 
             </div>
+
+           
 
             
         </form>

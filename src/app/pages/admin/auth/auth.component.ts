@@ -42,43 +42,5 @@ export class AuthComponent implements OnInit {
     form.reset();
   }
 
-  // onSubmit(form: NgForm){
-  //   console.log(form.value);
-
-  //   const email= form.value.email;
-  //   const password = form.value.password;
-
-  //   let authObs = Observable<AuthResponseData>
-
-  //   this.authService.login(email, password).subscribe(resData => {
-  //        console.log(resData);
-
-  //      }, error =>
-  //      {
-  //       console.log(error.error.error.message);
-
-  //      }
-
-  //      );
-
-  //      authObs.subscribe( resData => {
-  //       console.log(resData)
-  //      },
-  //      errorMessage => {
-  //       console.log (errorMessage);
-  //       this.error =errorMessage;
-
-  //      });
-
-  //   // this.authService.singIn(email, password).subscribe(resData => {
-  //   //   console.log(resData);
-
-  //   // }, error =>
-  //   // {console.log(error);
-  //   // });
-
-  //   form.reset()
-  // }
-
   
 }
