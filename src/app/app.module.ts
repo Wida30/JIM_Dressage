@@ -9,9 +9,10 @@ import { NosotrosComponent } from './pages/nosotros/nosotros.component';
 import { ActividadesComponent } from './pages/actividades/actividades.component';
 import { ContactaComponent } from './pages/contacta/contacta.component';
 import { AdminComponent } from './pages/admin/admin.component';
-import { PruebasComponent } from './pruebas/pruebas.component';
+
 import { HomeComponent } from './pages/home/home.component';
 import { FooterComponent } from './core/footer/footer.component';
+
 
 
 
@@ -23,6 +24,8 @@ import { RecintoComponent } from './pages/instal/recinto/recinto.component';
 import { CaballosComponent } from './pages/instal/caballos/caballos.component';
 import { AuthComponent } from './pages/admin/auth/auth.component';
 import { AdministradorComponent } from './pages/admin/administrador/administrador.component';
+import { FullCalendarModule } from '@fullcalendar/angular';
+
 
 
 
@@ -34,7 +37,7 @@ import { AdministradorComponent } from './pages/admin/administrador/administrado
     ActividadesComponent,
     ContactaComponent,
     AdminComponent,
-    PruebasComponent,
+  
     HomeComponent,
     FooterComponent,
   
@@ -43,7 +46,8 @@ import { AdministradorComponent } from './pages/admin/administrador/administrado
          RecintoComponent,
          CaballosComponent,
          AuthComponent,
-         AdministradorComponent
+         AdministradorComponent,
+        
     
   ],
   imports: [
@@ -52,7 +56,8 @@ import { AdministradorComponent } from './pages/admin/administrador/administrado
     NgbModule, 
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FullCalendarModule
   ],
   providers: [ ],
   bootstrap: [AppComponent]
